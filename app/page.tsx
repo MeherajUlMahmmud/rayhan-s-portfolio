@@ -178,7 +178,7 @@ export default function Home() {
                 <line x1="60" y1="20" x2="60" y2="80" stroke="currentColor" strokeWidth="2" />
               </svg>
             </div>
-            <h2 className="text-3xl font-bold mb-4">Expertise & Services</h2>
+            <h2 className="text-3xl font-bold mb-4">Expertise</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Combining engineering precision with architectural creativity to deliver exceptional results across
               various domains.
@@ -196,7 +196,7 @@ export default function Home() {
               <div className="absolute right-0 top-0 w-24 h-24 opacity-10 group-hover:opacity-20 transition-opacity">
                 <FloorPlan />
               </div>
-              <Building2 className="h-12 w-12 mb-4 text-chart-1" />
+              <Building2 className="h-12 w-12 mb-4 text-chart-3" />
               <h3 className="text-xl font-semibold mb-2">Structural Design</h3>
               <p className="text-muted-foreground">
                 Innovative solutions for complex architectural challenges using cutting-edge engineering principles.
@@ -213,7 +213,7 @@ export default function Home() {
               <div className="absolute right-0 top-0 w-24 h-24 opacity-10 group-hover:opacity-20 transition-opacity">
                 <ColumnDetail />
               </div>
-              <Compass className="h-12 w-12 mb-4 text-chart-2" />
+              <Compass className="h-12 w-12 mb-4 text-chart-3" />
               <h3 className="text-xl font-semibold mb-2">Sustainable Architecture</h3>
               <p className="text-muted-foreground">
                 Eco-friendly designs that minimize environmental impact while maximizing functionality and aesthetics.
