@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Building2, Compass, Ruler } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { AppConstants } from '@/configs/constants'
 
 // Architectural SVG Components
 const BlueprintGrid = () => (
@@ -117,7 +118,7 @@ export default function Home() {
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80")',
+            backgroundImage: 'url("/images/hero-7.jpg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -136,10 +137,10 @@ export default function Home() {
             className="max-w-3xl"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Innovating Structural Design with Engineering Precision
+              {AppConstants.heroTitle}
             </h1>
             <p className="text-xl text-gray-100 mb-8">
-              Creating sustainable and innovative architectural solutions that shape the future of our built environment.
+              {AppConstants.heroSubtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-primary text-primary-foreground">
@@ -196,7 +197,7 @@ export default function Home() {
               <div className="absolute right-0 top-0 w-24 h-24 opacity-10 group-hover:opacity-20 transition-opacity">
                 <FloorPlan />
               </div>
-              <Building2 className="h-12 w-12 mb-4 text-chart-3" />
+              <Building2 className="h-12 w-12 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Structural Design</h3>
               <p className="text-muted-foreground">
                 Innovative solutions for complex architectural challenges using cutting-edge engineering principles.
@@ -213,7 +214,7 @@ export default function Home() {
               <div className="absolute right-0 top-0 w-24 h-24 opacity-10 group-hover:opacity-20 transition-opacity">
                 <ColumnDetail />
               </div>
-              <Compass className="h-12 w-12 mb-4 text-chart-3" />
+              <Compass className="h-12 w-12 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Sustainable Architecture</h3>
               <p className="text-muted-foreground">
                 Eco-friendly designs that minimize environmental impact while maximizing functionality and aesthetics.
@@ -230,7 +231,7 @@ export default function Home() {
               <div className="absolute right-0 top-0 w-24 h-24 opacity-10 group-hover:opacity-20 transition-opacity">
                 <SectionView />
               </div>
-              <Ruler className="h-12 w-12 mb-4 text-chart-3" />
+              <Ruler className="h-12 w-12 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Technical Consulting</h3>
               <p className="text-muted-foreground">
                 Expert guidance on architectural engineering aspects of your construction projects.

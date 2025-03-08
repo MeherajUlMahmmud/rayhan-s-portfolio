@@ -65,17 +65,21 @@ export default function About() {
               className="lg:w-1/2"
             >
               <h1 className="text-4xl font-bold mb-6">About {AppConstants.appName}</h1>
+              <p className="text-xl text-muted-foreground mb-2">
+                {AppConstants.aboutBioLine1}
+              </p>
+              <p className="text-xl text-muted-foreground mb-2">
+                {AppConstants.aboutBioLine2}
+              </p>
               <p className="text-xl text-muted-foreground mb-8">
-                An architectural engineer with over 8 years of experience in structural design
-                and sustainable architecture. Passionate about creating innovative solutions
-                that combine aesthetic beauty with engineering precision.
+                {AppConstants.aboutBioLine3}
               </p>
               <div className="flex gap-4">
                 <Button variant="outline">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                  <Link href="/contact">Download Resume</Link>
+                  <Link href="/#" target='_black'>Download Resume</Link>
                 </Button>
                 <Button>
                   <Contact className="h-5 w-5 mr-2" /> <Link href="/contact">Get in Touch</Link>
@@ -96,10 +100,10 @@ export default function About() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Skills Section */}
-      <section className="py-24">
+      <section className="py-24" >
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -134,10 +138,10 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Experience Section */}
-      <section className="py-24 bg-muted">
+      <section className="py-24 bg-muted" >
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -171,10 +175,10 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Education Section */}
-      <section className="py-24">
+      <section className="py-24" >
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -208,7 +212,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   )
 }
