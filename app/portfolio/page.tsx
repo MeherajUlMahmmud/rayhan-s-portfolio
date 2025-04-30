@@ -1,75 +1,17 @@
 "use client"
 
 import { motion } from 'framer-motion'
-import { Filter, Search } from 'lucide-react'
+import { Search } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useState } from 'react'
-
-const categories = ['All', 'Commercial', 'Residential', 'Infrastructure', 'Urban Planning', 'Sustainable']
-
-const projects = [
-  {
-    id: 1,
-    title: "Modern Office Complex",
-    category: "Commercial",
-    location: "New York, NY",
-    year: "2023",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80",
-    description: "A sustainable office complex featuring innovative structural solutions and energy-efficient design."
-  },
-  {
-    id: 2,
-    title: "Eco-Friendly Residence",
-    category: "Residential",
-    location: "San Francisco, CA",
-    year: "2023",
-    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80",
-    description: "Net-zero energy home with integrated solar systems and sustainable materials."
-  },
-  {
-    id: 3,
-    title: "Urban Bridge Design",
-    category: "Infrastructure",
-    location: "Chicago, IL",
-    year: "2022",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80",
-    description: "Innovative pedestrian bridge connecting urban districts with minimal environmental impact."
-  },
-  {
-    id: 4,
-    title: "City Center Revitalization",
-    category: "Urban Planning",
-    location: "Boston, MA",
-    year: "2022",
-    image: "https://images.unsplash.com/photo-1486744328743-c1a306cf6322?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80",
-    description: "Mixed-use development project focusing on community integration and sustainable urban living."
-  },
-  {
-    id: 5,
-    title: "Green Energy Campus",
-    category: "Sustainable",
-    location: "Seattle, WA",
-    year: "2023",
-    image: "https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80",
-    description: "Educational facility designed with renewable energy systems and biophilic principles."
-  },
-  {
-    id: 6,
-    title: "Historic Building Renovation",
-    category: "Commercial",
-    location: "Philadelphia, PA",
-    year: "2022",
-    image: "https://images.unsplash.com/photo-1486744328743-c1a306cf6322?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80",
-    description: "Adaptive reuse project preserving historical architecture while modernizing functionality."
-  }
-]
+import { AppConstants } from '@/lib/constants'
 
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [searchQuery, setSearchQuery] = useState('')
 
-  const filteredProjects = projects.filter(project => {
+  const filteredProjects = AppConstants.portfolioItems.filter(project => {
     const matchesCategory = selectedCategory === 'All' || project.category === selectedCategory
     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.description.toLowerCase().includes(searchQuery.toLowerCase())
@@ -101,7 +43,7 @@ export default function Portfolio() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 w-full md:w-auto">
-              {categories.map((category) => (
+              {AppConstants.portfolioCategories.map((category) => (
                 <Button
                   key={category}
                   variant={selectedCategory === category ? "default" : "outline"}

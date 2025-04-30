@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Award, Book, Briefcase, Contact, GraduationCap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { AppConstants } from '@/configs/constants'
+import { AppConstants } from '@/lib/constants'
 
 const skills = [
   { name: 'Structural Analysis', level: 95 },

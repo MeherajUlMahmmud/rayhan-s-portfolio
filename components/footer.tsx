@@ -1,4 +1,4 @@
-import { AppConstants } from "@/configs/constants";
+import { AppConstants } from "@/lib/constants";
 
 export function Footer() {
   return (

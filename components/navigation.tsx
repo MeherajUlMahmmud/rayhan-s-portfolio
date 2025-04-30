@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 import { Compass, Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { AppConstants } from '@/configs/constants'
+import { AppConstants } from '@/lib/constants'
 
 const navItems = [
   { href: '/', label: 'Home' },

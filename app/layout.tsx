@@ -4,7 +4,7 @@ import { Inter, Lora } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
-import { AppConstants } from '@/configs/constants';
+import { AppConstants } from '@/lib/constants';
 
 const inter = Inter({
   subsets: ['latin'],
